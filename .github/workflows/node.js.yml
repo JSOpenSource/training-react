@@ -27,9 +27,13 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: |
-          rm -rf dist
-          npm run build
-          git add dist -f
-          git commit -m "build files from github action"
-          git push
+    
+    # Runs a set of commands using the runners shell
+    - name: setup deployment
+      run: |
+        npm install
+        rm -rf dist
+        npm run build
+        git add dist -f
+        git commit -m "build files from github action"
+        git push
