@@ -31,7 +31,7 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: setup deployment
       run: |
-        npm install
+        npm ci
         rm -rf dist
         npm run build
         git add dist -f
