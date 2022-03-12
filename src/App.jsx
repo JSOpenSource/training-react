@@ -1,24 +1,16 @@
 import "./App.css";
-import Card from "./Card";
+import Card from "./components/Card/Card";
 import Form from "./Form";
+import {useState} from "react";
 
 function App() {
-  const employees = [
-    { name: "Sadanand", role: "Frontend dev" },
-    { name: "Prathima", role: "Tech lead" },
-    { name: "Ashwitha", role: "Backend dev" },
-    { name: "Zeeyan", role: "Mobile dev" },
-  ];
-  
+  const [id, setId] = useState(1);
+
   return (
     <div>
-      <h1> Hello, world</h1>
-
-      {employees.map((e) => (
-        <Card name={e.name} role={e.role} />
-      ))}
-
-      <Form />
+      <h1>Employees Details</h1>
+      <Form id={id} setId={setId} />
+      <Card id={id} />
     </div>
   );
 }

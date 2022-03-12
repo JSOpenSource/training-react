@@ -6,20 +6,3 @@ input {
   padding: 0.5rem;
   font-size: 2rem;
 }
-
-.my-card {
-  background-color: pink;
-  padding: 1rem;
-  border: 1px solid grey;
-  margin: 10px;
-  border-radius: 5px;
-  display: inline-block;
-}
-
-.my-card > div {
-  margin-bottom: 10px;
-}
-
-.my-card > div:first-child{
-  font-weight: bold;
-}
